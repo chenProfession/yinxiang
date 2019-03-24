@@ -5,6 +5,7 @@ server:
   servlet:
     context-path: /yinxiang
 
+#Spring Boot Actuator
 management:
   server:
     port: 8088

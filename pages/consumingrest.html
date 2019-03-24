@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello jQuery</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+    $.ajax({
+        url: "http://localhost:8080/yinxiang/greeting"
+    }).then(function(data) {
+       $('.greeting-id').append(data.id);
+       $('.greeting-content').append(data.content);
+    });
+});
+    </script>
+</head>
+<body>
+
+<body>
+        <div>
+            <p class="greeting-id">The ID is </p>
+            <p class="greeting-content">The content is </p>
+        </div>
+    </body>
+
+</body>
+</html>
