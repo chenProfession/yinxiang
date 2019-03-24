@@ -5,6 +5,10 @@ server:
   servlet:
     context-path: /yinxiang
 
+management:
+  server:
+    port: 8088
+
 logging:
   config: ./src/main/resources/logconfig/logback-spring-dev.xml
   # 日志文件,绝对路径或相对路径
