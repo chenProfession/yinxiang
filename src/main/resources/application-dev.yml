@@ -27,9 +27,9 @@ spring:
       default-property-inclusion: non_null
   datasource:
       driver-class-name:
-      username: chen
-      password: hsbc
-      url: jdbc:mysql://193.112.35.196:3306/ordersys?characterEncoding=utf-8&useSSL=false
+      username: yinxiang
+      password: yinxiang888
+      url: jdbc:mysql://127.0.0.1:3306/yinxiang?characterEncoding=utf-8&useSSL=false
 
 # JWT 认证配置
 jwt:
