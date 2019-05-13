@@ -26,6 +26,10 @@ public class CustomerInfo {
     @Column(name="customer_name", length=30)
     private String customerName;
 
+    /** customer gender */
+    @Column(name="customer_gender")
+    private String customerGender;
+
     /** customer contact */
     @Column(name="customer_contact")
     private String customerContact;

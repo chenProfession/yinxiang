@@ -1,5 +1,7 @@
 package com.yiinxiang.customer;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 /**
@@ -32,5 +34,14 @@ public interface CustomerService {
     * @Author: Mr.Cheng
     * @Date: 2019/3/27 8:53 PM
     */
-    CustomerInfo getCustomerByID(String id);
+    CustomerInfo getCustomerByID(Long id);
+
+    /**
+     * @Description: to get the information of the customer by phone
+     * @Param: phone
+     * @return: Customer Information
+     * @Author: Mr.Cheng
+     * @Date: 2019/3/27 8:53 PM
+     */
+    CustomerInfo getCustomerByPhone(String phone);
 }

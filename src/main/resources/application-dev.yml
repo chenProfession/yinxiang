@@ -28,8 +28,8 @@ spring:
   datasource:
       driver-class-name:
       username: yinxiang
-      password: yinxiang888
-      url: jdbc:mysql://127.0.0.1:3306/yinxiang?characterEncoding=utf-8&useSSL=false
+      password: Yinxiang$888
+      url: jdbc:mysql://129.204.116.84:3306/yinxiang?characterEncoding=utf-8&useSSL=false
 
 # JWT 认证配置
 jwt:
