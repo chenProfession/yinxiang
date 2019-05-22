@@ -1,4 +1,4 @@
-package com.yiinxiang.customer;
+package com.yinxiang.customer;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;

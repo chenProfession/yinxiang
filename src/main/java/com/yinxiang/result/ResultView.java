@@ -1,4 +1,4 @@
-package com.yiinxiang.result;
+package com.yinxiang.result;
 
 import lombok.Data;
 

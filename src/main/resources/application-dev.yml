@@ -20,16 +20,17 @@ logging:
 
 spring:
   jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
     hibernate:
       ddl-auto: update
     show-sql: true
   jackson:
       default-property-inclusion: non_null
   datasource:
-      driver-class-name:
+      driver-class-name: com.mysql.jdbc.Driver
       username: yinxiang
-      password: Yinxiang$888
-      url: jdbc:mysql://129.204.116.84:3306/yinxiang?characterEncoding=utf-8&useSSL=false
+      password: yinxiang
+      url: jdbc:mysql://127.0.0.1:8808/yinxiang?characterEncoding=utf-8&useSSL=false
 
 # JWT 认证配置
 jwt:

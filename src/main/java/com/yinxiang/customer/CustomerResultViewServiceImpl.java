@@ -1,8 +1,7 @@
-package com.yiinxiang.result;
+package com.yinxiang.customer;
 
-import com.yiinxiang.customer.CustomerInfo;
-import com.yiinxiang.customer.CustomerService;
-import com.yiinxiang.enums.ResultEnums;
+import com.yinxiang.enums.ResultEnums;
+import com.yinxiang.result.ResultView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,12 +9,12 @@ import java.util.List;
 
 /**
  * @program: ordering
- * @Description: To implement Result Service
+ * @Description: Implement the service of customer result view
  * @author: Mr.Cheng
- * @date: 2019/4/2 4:45 PM
+ * @date: 2019/5/13 3:28 PM
  */
 @Service
-public class ResultViewServiceImpl implements ResultViewService {
+public class CustomerResultViewServiceImpl implements CustomerResultViewService{
 
     @Autowired
     private CustomerService customerService;
@@ -83,14 +82,14 @@ public class ResultViewServiceImpl implements ResultViewService {
     @Override
     public ResultView getCustomerViewByName(String customerName) {
 
-        CustomerInfo customerInfo = customerService.getCustomerByName(customerName);
+        List<CustomerInfo> customerInfoList = customerService.getCustomerByName(customerName);
 
         /** make the result view **/
         ResultView resultView = new ResultView();
-        if (customerInfo != null) {
-           resultView.setCode(0);
-           resultView.setMsg(ResultEnums.SUCCESS.getMessage());
-           resultView.setData(customerInfo);
+        if (customerInfoList.size() > 0) {
+            resultView.setCode(0);
+            resultView.setMsg(ResultEnums.SUCCESS.getMessage());
+            resultView.setData(customerInfoList);
         } else {
             resultView.setCode(11);
             resultView.setMsg(ResultEnums.FAILURE.getMessage());

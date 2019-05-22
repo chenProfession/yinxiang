@@ -1,4 +1,4 @@
-package com.yiinxiang.enums;
+package com.yinxiang.enums;
 
 import lombok.Getter;
 

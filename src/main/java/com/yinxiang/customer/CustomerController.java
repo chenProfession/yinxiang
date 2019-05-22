@@ -1,28 +1,28 @@
-package com.yiinxiang.result;
+package com.yinxiang.customer;
 
-import com.yiinxiang.enums.ResultEnums;
+import com.yinxiang.enums.ResultEnums;
+import com.yinxiang.result.ResultView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
  * @program: ordering
- * @Description:
+ * @Description: support API of customer for the service
  * @author: Mr.Cheng
- * @date: 2019/4/2 8:54 PM
+ * @date: 2019/5/13 3:04 PM
  */
-
 @RestController
 @Slf4j
-public class ResultViewController {
+public class CustomerController {
 
     @Autowired
-    private ResultViewService resultViewService;
+    private CustomerResultViewService customerResultViewService;
 
     @CrossOrigin(origins = "*",maxAge = 3600)
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
     public ResultView getCustomerList(){
-        return resultViewService.getCustomerListView();
+        return customerResultViewService.getCustomerListView();
     }
 
     @CrossOrigin(origins = "*", maxAge = 3600)
@@ -36,5 +36,4 @@ public class ResultViewController {
         }
         return null;
     }
-
 }

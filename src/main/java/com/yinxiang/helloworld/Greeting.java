@@ -1,4 +1,4 @@
-package com.yiinxiang.helloworld;
+package com.yinxiang.helloworld;
 
 /**
  * @program: ordering
