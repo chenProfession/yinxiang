@@ -79,5 +79,12 @@ public interface CustomerService {
     */
     int saveCustomer(CustomerInfo customerInfo);
 
-    Iterable<CustomerInfo> saveAllCustomers(Iterable<CustomerInfo> customerInfoIterable);
+    /**
+     * @Description: to save the data of customers
+     * @Param: [customerInfo]
+     * @return: int
+     * @Author: Mr.Cheng
+     * @Date: 2019/5/14 11:10 AM
+     */
+    List<CustomerInfo> saveAllCustomers(Iterable<CustomerInfo> customerInfoIterable);
 }

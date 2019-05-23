@@ -21,13 +21,13 @@ public interface CustomerResultViewService {
     ResultView getCustomerListView();
 
     /**
-     * @Description: to give the view of the customer by Id
+     * @Description: to give the view of the customer by Email
      * @Param: customer id
      * @return: the view of the customer
      * @Author: Mr.Cheng
      * @Date: 2019/3/29 8:45 AM
      */
-    ResultView getCustomerViewById(Long customerId);
+    ResultView getCustomerViewByEmail(String customerEmail);
 
     /**
      * @Description: to give the view of the customer by name

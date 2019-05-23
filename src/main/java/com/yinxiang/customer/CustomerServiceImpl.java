@@ -4,6 +4,7 @@ import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -56,7 +57,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public CustomerInfo getCustomerByID(Long id) {
         List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerID(id);
-        if(customerInfoList.size() != 0){
+        if(customerInfoList.size() > 0){
             return customerInfoList.get(0);
         }
         return null;
@@ -73,7 +74,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public CustomerInfo getCustomerByPhone(String phone) {
         List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerPhone(phone);
-        if(customerInfoList.size() != 0){
+        if(customerInfoList.size() > 0){
             return customerInfoList.get(0);
         }
         return null;
@@ -90,7 +91,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public CustomerInfo getCustomerByEmail(String email) {
         List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerEmail(email);
-        if(customerInfoList.size() != 0){
+        if(customerInfoList.size() > 0){
             return customerInfoList.get(0);
         }
         return null;
@@ -117,9 +118,11 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public int removeCustomerByID(Long id) {
         int deleted = 0;
-        customerRepository.deleteById(id);
-        if(!customerRepository.existsById(id)){
-            deleted = 1;
+        if(customerRepository.existsById(id)){
+            customerRepository.deleteById(id);
+            if(!customerRepository.existsById(id)) {
+                deleted = 1;
+            }
         }
         return deleted;
     }
@@ -143,9 +146,24 @@ public class CustomerServiceImpl implements CustomerService{
         return saved;
     }
 
+    /**
+    * @Description: to save all the customers informations
+    * @Param: [customerInfoIterable]
+    * @return: java.lang.Iterable<com.yinxiang.customer.CustomerInfo>
+    * @Author: Mr.Cheng
+    * @Date: 2019/5/23 8:40 AM
+    */
     @Override
-    public Iterable<CustomerInfo> saveAllCustomers(Iterable<CustomerInfo> customerInfoIterable) {
-        return customerRepository.saveAll(customerInfoIterable);
+    public List<CustomerInfo> saveAllCustomers(Iterable<CustomerInfo> customerInfoIterable) {
+        Iterator iterator = customerInfoIterable.iterator();
+        while(iterator.hasNext()){
+            CustomerInfo customerInfo = (CustomerInfo) iterator.next();
+            if(getCustomerByPhone(customerInfo.getCustomerPhone()) != null
+                    || getCustomerByEmail(customerInfo.getCustomerEmail()) != null){
+                iterator.remove();
+            }
+        }
+        return Lists.newArrayList(customerRepository.saveAll(customerInfoIterable));
     }
 
 }

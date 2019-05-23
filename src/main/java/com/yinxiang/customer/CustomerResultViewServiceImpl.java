@@ -53,9 +53,9 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
      * @Date: 2019/3/29 8:45 AM
      */
     @Override
-    public ResultView getCustomerViewById(Long customerId) {
+    public ResultView getCustomerViewByEmail(String customerEmail) {
 
-        CustomerInfo customerInfo = customerService.getCustomerByID(customerId);
+        CustomerInfo customerInfo = customerService.getCustomerByEmail(customerEmail);
 
         /** make the result view **/
         ResultView resultView = new ResultView();

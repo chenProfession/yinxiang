@@ -28,10 +28,10 @@ public class CustomerController {
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/customer",method = RequestMethod.GET)
     public ResultView getCustomer(
-            @RequestParam(required = false, value = "none") Long customerId,
+            @RequestParam(required = false, value = "none") String customerEmail,
             @RequestParam(required = false, value = "none") String customerName,
             @RequestParam(required = false, value = "none") String customerPhone){
-        if(!customerId.toString().equals(ResultEnums.NONE.getMessage())){
+        if(!customerEmail.toString().equals(ResultEnums.NONE.getMessage())){
 
         }
         return null;
