@@ -80,6 +80,15 @@ public interface CustomerService {
     int saveCustomer(CustomerInfo customerInfo);
 
     /**
+    * @Description: to change the data of customer
+    * @Param: [customerInfo]
+    * @return: int
+    * @Author: Mr.Cheng
+    * @Date: 2019/5/29 7:41 PM
+    */
+    int changeCustomer(CustomerInfo customerInfo);
+
+    /**
      * @Description: to save the data of customers
      * @Param: [customerInfo]
      * @return: int

@@ -62,7 +62,9 @@ public enum ResultEnums {
 
     REGISTER_SUCCESS(31, "register success"),
 
-    NONE(32, "none")
+    NONE(32, "none"),
+
+    SYSTEM_EXCEPTION(33, "系统繁忙，请稍后再试")
     ;
 
     private Integer code;

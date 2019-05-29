@@ -147,6 +147,26 @@ public class CustomerServiceImpl implements CustomerService{
     }
 
     /**
+     * @param customerInfo
+     * @Description: to change the data of customer
+     * @Param: [customerInfo]
+     * @return: int
+     * @Author: Mr.Cheng
+     * @Date: 2019/5/29 7:41 PM
+     */
+    @Override
+    public int changeCustomer(CustomerInfo customerInfo) {
+        int changed = 0;
+        if(customerRepository.existsById(customerInfo.getCustomerID())
+                && getCustomerByPhone(customerInfo.getCustomerPhone()) == null
+                && getCustomerByEmail(customerInfo.getCustomerEmail()) == null){
+            customerRepository.save(customerInfo);
+            changed = 1;
+        }
+        return changed;
+    }
+
+    /**
     * @Description: to save all the customers informations
     * @Param: [customerInfoIterable]
     * @return: java.lang.Iterable<com.yinxiang.customer.CustomerInfo>

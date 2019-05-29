@@ -4,6 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 /**
  * @program: ordering
@@ -23,10 +27,13 @@ public class CustomerInfo {
     private Long customerID;
 
     /** customer name */
+    @Size(min = 1,max = 10,message = "{customerInfo.customerName.size}")
+    @NotBlank(message = "{customerInfo.customerName.notBlank}")
     @Column(name="customer_name", length=30)
     private String customerName;
 
     /** customer gender */
+    @NotBlank(message = "{customerInfo.customerGender.notBlank}")
     @Column(name="customer_gender")
     private String customerGender;
 
@@ -35,10 +42,12 @@ public class CustomerInfo {
     private String customerContact;
 
     /** customer phone number */
+    @Pattern(regexp = "1\\d{10}",message = "{customerInfo.customerPhone.pattern}")
     @Column(name="customer_phone")
     private String customerPhone;
 
     /** customer email */
+    @Email
     @Column(name="customer_email")
     private String customerEmail;
 
