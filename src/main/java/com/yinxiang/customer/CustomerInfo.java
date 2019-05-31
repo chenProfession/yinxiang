@@ -27,7 +27,7 @@ public class CustomerInfo {
     private Long customerID;
 
     /** customer name */
-    @Size(min = 1,max = 10,message = "{customerInfo.customerName.size}")
+    @Size(min = 1,max = 28,message = "{customerInfo.customerName.size}")
     @NotBlank(message = "{customerInfo.customerName.notBlank}")
     @Column(name="customer_name", length=30)
     private String customerName;

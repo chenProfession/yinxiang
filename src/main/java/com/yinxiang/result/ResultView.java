@@ -18,4 +18,18 @@ public class ResultView<T> {
 
     /** content of data */
     private T data;
+
+    public ResultView(Integer code,String msg){
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public ResultView(Integer code, String msg,T data){
+        this.code = code;
+        this.msg = msg;
+        this.data = data;
+    }
+
+    public ResultView(){
+    }
 }
