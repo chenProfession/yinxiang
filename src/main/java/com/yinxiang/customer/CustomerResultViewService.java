@@ -3,6 +3,7 @@ package com.yinxiang.customer;
 import com.yinxiang.result.ResultView;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @program: ordering
@@ -18,7 +19,7 @@ public interface CustomerResultViewService {
      * @Author: Mr.Cheng
      * @Date: 2019/3/29 8:42 AM
      */
-    ResultView getCustomerListView();
+    CompletableFuture<ResultView> getCustomerListView() throws InterruptedException;
 
     /**
      * @Description: to give the view of the customer by Email
@@ -27,7 +28,7 @@ public interface CustomerResultViewService {
      * @Author: Mr.Cheng
      * @Date: 2019/3/29 8:45 AM
      */
-    ResultView getCustomerViewByEmail(String customerEmail);
+    CompletableFuture<ResultView> getCustomerViewByEmail(String customerEmail) throws InterruptedException;
 
     /**
      * @Description: to give the view of the customer by name
@@ -36,7 +37,7 @@ public interface CustomerResultViewService {
      * @Author: Mr.Cheng
      * @Date: 2019/4/4 6:36 PM
      */
-    ResultView getCustomerViewByName(String customerName);
+    CompletableFuture<ResultView> getCustomerViewByName(String customerName) throws InterruptedException;
 
     /**
      * @Description: to give the view of the customer by phone
@@ -45,6 +46,6 @@ public interface CustomerResultViewService {
      * @Author: Mr.Cheng
      * @Date: 2019/4/4 6:37 PM
      */
-    ResultView getCustomerViewByPhone(String customerPhone);
+    CompletableFuture<ResultView> getCustomerViewByPhone(String customerPhone) throws InterruptedException;
 
 }

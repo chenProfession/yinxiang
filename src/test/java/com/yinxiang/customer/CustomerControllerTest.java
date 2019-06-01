@@ -16,6 +16,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -50,7 +51,7 @@ public class CustomerControllerTest {
         customerInfoList.add(customerInfo);
 
         given(this.customerResultViewService.getCustomerListView())
-                .willReturn(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfoList));
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfoList)));
 
         String result = this.mvc.perform(get("/customers").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
@@ -70,11 +71,11 @@ public class CustomerControllerTest {
         customerInfo.setCustomerAddress("this is a test address");
 
         given(this.customerResultViewService.getCustomerViewByEmail("test@test.163.com"))
-                .willReturn(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo));
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo)));
         given(this.customerResultViewService.getCustomerViewByName("test"))
-                .willReturn(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo));
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo)));
         given(this.customerResultViewService.getCustomerViewByPhone("12345678913"))
-                .willReturn(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo));
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo)));
 
         String result1 = this.mvc.perform(get("/customer").accept(MediaType.APPLICATION_JSON).param("email","test@test.163.com"))
                 .andExpect(status().isOk())

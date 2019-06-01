@@ -3,9 +3,11 @@ package com.yinxiang.customer;
 import com.yinxiang.enums.ResultEnums;
 import com.yinxiang.result.ResultView;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * @program: ordering
@@ -14,6 +16,7 @@ import java.util.List;
  * @date: 2019/5/13 3:28 PM
  */
 @Service
+@Async("taskExecutor")
 public class CustomerResultViewServiceImpl implements CustomerResultViewService{
 
     @Autowired
@@ -26,7 +29,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
      * @Date: 2019/3/29 8:42 AM
      */
     @Override
-    public ResultView getCustomerListView() {
+    public CompletableFuture<ResultView> getCustomerListView() throws InterruptedException{
 
         List<CustomerInfo> customerInfoList = customerService.findAllCustomers();
 
@@ -42,7 +45,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
             resultView.setData(ResultEnums.CUSTOMER_NOT_EXIST.getMessage());
         }
 
-        return resultView;
+        return CompletableFuture.completedFuture(resultView);
     }
 
     /**
@@ -53,7 +56,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
      * @Date: 2019/3/29 8:45 AM
      */
     @Override
-    public ResultView getCustomerViewByEmail(String customerEmail) {
+    public CompletableFuture<ResultView> getCustomerViewByEmail(String customerEmail) throws InterruptedException{
 
         CustomerInfo customerInfo = customerService.getCustomerByEmail(customerEmail);
 
@@ -68,7 +71,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
             resultView.setMsg(ResultEnums.FAILURE.getMessage());
             resultView.setData(ResultEnums.CUSTOMER_NOT_EXIST.getMessage());
         }
-        return resultView;
+        return CompletableFuture.completedFuture(resultView);
     }
 
     /**
@@ -80,7 +83,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
      * @Date: 2019/4/4 6:36 PM
      */
     @Override
-    public ResultView getCustomerViewByName(String customerName) {
+    public CompletableFuture<ResultView> getCustomerViewByName(String customerName) throws InterruptedException{
 
         List<CustomerInfo> customerInfoList = customerService.getCustomerByName(customerName);
 
@@ -96,7 +99,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
             resultView.setData(ResultEnums.CUSTOMER_NOT_FOUND_BY_NAME.getMessage());
         }
 
-        return resultView;
+        return CompletableFuture.completedFuture(resultView);
     }
 
     /**
@@ -108,7 +111,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
      * @Date: 2019/4/4 6:37 PM
      */
     @Override
-    public ResultView getCustomerViewByPhone(String customerPhone) {
+    public CompletableFuture<ResultView> getCustomerViewByPhone(String customerPhone) throws InterruptedException{
 
         CustomerInfo customerInfo = customerService.getCustomerByPhone(customerPhone);
 
@@ -125,7 +128,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
             resultView.setData(ResultEnums.CUSTOMER_NOT_FOUND_BY_PHONE.getMessage());
         }
 
-        return resultView;
+        return CompletableFuture.completedFuture(resultView);
     }
 
 }

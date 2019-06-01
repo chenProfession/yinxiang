@@ -27,7 +27,7 @@ public class CustomerResultViewServiceImplTest {
 
     @Test
     public void getCustomerListView() throws Exception {
-        ResultView resultView = customerResultViewService.getCustomerListView();
+        ResultView resultView = customerResultViewService.getCustomerListView().get();
         displayResultView(resultView);
         Assert.assertNotNull(resultView);
     }
@@ -35,7 +35,7 @@ public class CustomerResultViewServiceImplTest {
     @Test
     public void getCustomerViewByEmail() throws Exception {
         String email = "helloworld@163.com";
-        ResultView resultView = customerResultViewService.getCustomerViewByEmail(email);
+        ResultView resultView = customerResultViewService.getCustomerViewByEmail(email).get();
         displayResultView(resultView);
         Assert.assertNotNull(resultView);
     }
@@ -43,7 +43,7 @@ public class CustomerResultViewServiceImplTest {
     @Test
     public void getCustomerViewByName() throws Exception {
         String name = "hello world";
-        ResultView resultView = customerResultViewService.getCustomerViewByName(name);
+        ResultView resultView = customerResultViewService.getCustomerViewByName(name).get();
         displayResultView(resultView);
         Assert.assertNotNull(resultView);
     }
@@ -51,7 +51,7 @@ public class CustomerResultViewServiceImplTest {
     @Test
     public void getCustomerViewByPhone() throws Exception {
         String phone = "123456789";
-        ResultView resultView = customerResultViewService.getCustomerViewByPhone(phone);
+        ResultView resultView = customerResultViewService.getCustomerViewByPhone(phone).get();
         displayResultView(resultView);
         Assert.assertNotNull(resultView);
     }

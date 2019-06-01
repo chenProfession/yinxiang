@@ -28,8 +28,8 @@ public class CustomerController {
 
     @CrossOrigin(origins = "*",maxAge = 3600)
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
-    public ResultView getCustomerList(){
-        return customerResultViewService.getCustomerListView();
+    public ResultView getCustomerList() throws Exception{
+        return customerResultViewService.getCustomerListView().get();
     }
 
     @CrossOrigin(origins = "*", maxAge = 3600)
@@ -37,20 +37,20 @@ public class CustomerController {
     public ResultView getCustomer(
             @RequestParam(required = false, name = "email", defaultValue = "none") String customerEmail,
             @RequestParam(required = false, name = "name", defaultValue = "none") String customerName,
-            @RequestParam(required = false, name = "phone", defaultValue = "none") String customerPhone){
+            @RequestParam(required = false, name = "phone", defaultValue = "none") String customerPhone) throws Exception{
 
         ResultView resultView = new ResultView();
         resultView.setCode(2);
         resultView.setMsg(ResultEnums.FAILURE.getMessage());
 
         if(!ResultEnums.NONE.getMessage().equals(customerPhone)){
-            resultView = customerResultViewService.getCustomerViewByPhone(customerPhone);
+            resultView = customerResultViewService.getCustomerViewByPhone(customerPhone).get();
         } else {
             if(!ResultEnums.NONE.getMessage().equals(customerEmail)){
-                resultView = customerResultViewService.getCustomerViewByEmail(customerEmail);
+                resultView = customerResultViewService.getCustomerViewByEmail(customerEmail).get();
             } else {
                 if(!ResultEnums.NONE.getMessage().equals(customerName)) {
-                    resultView = customerResultViewService.getCustomerViewByName(customerName);
+                    resultView = customerResultViewService.getCustomerViewByName(customerName).get();
                 }
             }
         }
