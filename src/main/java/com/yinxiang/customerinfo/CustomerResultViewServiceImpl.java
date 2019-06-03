@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import com.yinxiang.enums.ResultEnums;
 import com.yinxiang.result.ResultView;
@@ -58,7 +58,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
     @Override
     public CompletableFuture<ResultView> getCustomerViewByEmail(String customerEmail) throws InterruptedException{
 
-        CustomerInfo customerInfo = customerService.getCustomerByEmail(customerEmail);
+        CustomerInfo customerInfo = customerService.getCustomerByEmail(customerEmail).get(0);
 
         /** make the result view **/
         ResultView resultView = new ResultView();
@@ -113,7 +113,7 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
     @Override
     public CompletableFuture<ResultView> getCustomerViewByPhone(String customerPhone) throws InterruptedException{
 
-        CustomerInfo customerInfo = customerService.getCustomerByPhone(customerPhone);
+        CustomerInfo customerInfo = customerService.getCustomerByPhone(customerPhone).get(0);
 
         /** make the result view **/
         ResultView resultView = new ResultView();
@@ -128,6 +128,89 @@ public class CustomerResultViewServiceImpl implements CustomerResultViewService{
             resultView.setData(ResultEnums.CUSTOMER_NOT_FOUND_BY_PHONE.getMessage());
         }
 
+        return CompletableFuture.completedFuture(resultView);
+    }
+
+    /**
+     * @param customerInfo
+     * @Description: to save the information of the customer and give the result view
+     * @Param: [customerInfo]
+     * @return: java.util.concurrent.CompletableFuture<com.yinxiang.result.ResultView>
+     * @Author: Mr.Cheng
+     * @Date: 2019/6/1 10:11 PM
+     */
+    @Override
+    public CompletableFuture<ResultView> saveCustomerView(CustomerInfo customerInfo) throws InterruptedException {
+
+        /** make the result view **/
+        ResultView resultView = new ResultView();
+        resultView.setCode(34);
+        resultView.setMsg(ResultEnums.FAILURE.getMessage());
+        resultView.setData(ResultEnums.CUSTOMER_CAN_NOT_SAVE.getMessage());
+
+        if(customerInfo != null && customerInfo.getCustomerID() == null){
+            if(customerService.saveCustomer(customerInfo) == 1){
+                resultView.setCode(0);
+                resultView.setMsg(ResultEnums.SUCCESS.getMessage());
+                resultView.setData(customerInfo);
+            }
+        }
+        return CompletableFuture.completedFuture(resultView);
+    }
+
+    /**
+     * @param customerInfo
+     * @Description: to change the information of the customer and give the result view
+     * @Param: [customerInfo]
+     * @return: java.util.concurrent.CompletableFuture<com.yinxiang.result.ResultView>
+     * @Author: Mr.Cheng
+     * @Date: 2019/6/1 10:13 PM
+     */
+    @Override
+    public CompletableFuture<ResultView> changeCustomerView(CustomerInfo customerInfo,
+                                                            Long customerId) throws InterruptedException {
+
+        /** make the result view **/
+        ResultView resultView = new ResultView();
+        resultView.setCode(35);
+        resultView.setMsg(ResultEnums.FAILURE.getMessage());
+        resultView.setData(ResultEnums.CUSTOMER_CAN_NOT_CHANGE.getMessage());
+
+        if(customerInfo != null && customerInfo.getCustomerID() != null
+                && customerService.getCustomerByID(customerId) != null){
+            if(customerService.changeCustomer(customerInfo) == 1){
+                resultView.setCode(0);
+                resultView.setMsg(ResultEnums.SUCCESS.getMessage());
+                resultView.setData(customerInfo);
+            }
+        }
+        return CompletableFuture.completedFuture(resultView);
+    }
+
+    /**
+     * @param customerId
+     * @Description: to remove the customer and give the result view
+     * @Param: [customerId]
+     * @return: java.util.concurrent.CompletableFuture<com.yinxiang.result.ResultView>
+     * @Author: Mr.Cheng
+     * @Date: 2019/6/1 10:27 PM
+     */
+    @Override
+    public CompletableFuture<ResultView> removeCustomerView(Long customerId) throws InterruptedException {
+
+        /** make the result view **/
+        ResultView resultView = new ResultView();
+        resultView.setCode(35);
+        resultView.setMsg(ResultEnums.FAILURE.getMessage());
+        resultView.setData(ResultEnums.CUSTOMER_CAN_NOT_REMOVE.getMessage());
+
+        if(customerId != null){
+            if(customerService.removeCustomerByID(customerId) == 1){
+                resultView.setCode(0);
+                resultView.setMsg(ResultEnums.SUCCESS.getMessage());
+                resultView.setData(customerId);
+            }
+        }
         return CompletableFuture.completedFuture(resultView);
     }
 

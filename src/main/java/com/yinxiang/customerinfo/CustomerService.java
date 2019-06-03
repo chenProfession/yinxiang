@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import java.util.List;
 
@@ -42,7 +42,7 @@ public interface CustomerService {
      * @Author: Mr.Cheng
      * @Date: 2019/3/27 8:53 PM
      */
-    CustomerInfo getCustomerByPhone(String phone);
+    List<CustomerInfo> getCustomerByPhone(String phone);
 
     /**
      * @Description: to get the information of the customer by email
@@ -51,7 +51,7 @@ public interface CustomerService {
      * @Author: Mr.Cheng
      * @Date: 2019/3/27 8:53 PM
      */
-    CustomerInfo getCustomerByEmail(String email);
+    List<CustomerInfo> getCustomerByEmail(String email);
 
     /**
     * @Description: to count the number of the customers

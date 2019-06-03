@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
@@ -56,7 +56,7 @@ public class CustomerServiceImplTest {
     @Test
     public void getCustomerByPhone() throws Exception {
         String phone = "1234567890";
-        CustomerInfo customerInfo = customerService.getCustomerByPhone(phone);
+        CustomerInfo customerInfo = customerService.getCustomerByPhone(phone).get(0);
         if(customerInfo != null) {
             log.info(customerInfo.getCustomerID().toString());
             log.info(customerInfo.getCustomerEmail());
@@ -70,7 +70,7 @@ public class CustomerServiceImplTest {
     @Test
     public void getCustomerByEmail() throws Exception {
         String email = "helloworld@163.com";
-        CustomerInfo customerInfo = customerService.getCustomerByEmail(email);
+        CustomerInfo customerInfo = customerService.getCustomerByEmail(email).get(0);
         if(customerInfo != null){
             log.info(customerInfo.toString());
             Assert.assertNotNull(customerInfo);

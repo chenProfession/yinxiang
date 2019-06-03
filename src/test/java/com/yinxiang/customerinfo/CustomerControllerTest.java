@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import com.alibaba.fastjson.JSON;
 import com.yinxiang.enums.ResultEnums;
@@ -30,9 +30,6 @@ public class CustomerControllerTest {
 
     @MockBean
     private CustomerResultViewService customerResultViewService;
-
-    @MockBean
-    private CustomerService customerService;
 
     @Autowired
     private MockMvc mvc;
@@ -101,7 +98,8 @@ public class CustomerControllerTest {
         customerInfo.setCustomerEmail("test@test.com");
         customerInfo.setCustomerAddress("this is a test address");
 
-        given(this.customerService.saveCustomer(customerInfo)).willReturn(1);
+        given(this.customerResultViewService.saveCustomerView(customerInfo))
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo)));
         String result = this.mvc.perform(post("/customers").contentType(MediaType.APPLICATION_JSON)
                 .content(JSON.toJSONString(customerInfo)))
                 .andExpect(status().isOk())
@@ -121,8 +119,8 @@ public class CustomerControllerTest {
         customerInfo.setCustomerEmail("test@test.com");
         customerInfo.setCustomerAddress("this is a test address");
 
-        given(customerService.changeCustomer(customerInfo)).willReturn(1);
-        given(customerService.getCustomerByID(Long.valueOf(0))).willReturn(customerInfo);
+        given(this.customerResultViewService.changeCustomerView(customerInfo,Long.valueOf(0)))
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),customerInfo)));
 
         String result = this.mvc.perform(put("/customer/0").contentType(MediaType.APPLICATION_JSON)
                 .content(JSON.toJSONString(customerInfo)))
@@ -135,7 +133,8 @@ public class CustomerControllerTest {
     @Test
     public void removeCustomerById() throws Exception {
 
-        given(customerService.removeCustomerByID(Long.valueOf(0))).willReturn(1);
+        given(this.customerResultViewService.removeCustomerView(Long.valueOf(0)))
+                .willReturn(CompletableFuture.completedFuture(new ResultView(0, ResultEnums.SUCCESS.getMessage(),Long.valueOf(0))));
 
         String result = this.mvc.perform(delete("/customer/0").accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())

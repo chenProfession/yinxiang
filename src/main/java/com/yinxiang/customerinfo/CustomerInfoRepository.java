@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import org.springframework.data.repository.CrudRepository;
 
@@ -10,7 +10,7 @@ import java.util.List;
  * @author: Mr.Cheng
  * @date: 2019/3/28 12:32 AM
  */
-public interface CustomerRepository extends CrudRepository<CustomerInfo, Long> {
+public interface CustomerInfoRepository extends CrudRepository<CustomerInfo, Long> {
 
     /**
     * fetch the data of customer from database by name

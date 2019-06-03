@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import com.yinxiang.enums.ResultEnums;
 import com.yinxiang.result.ResultView;
@@ -22,9 +22,6 @@ public class CustomerController {
 
     @Autowired
     private CustomerResultViewService customerResultViewService;
-
-    @Autowired
-    private CustomerService customerService;
 
     @CrossOrigin(origins = "*",maxAge = 3600)
     @RequestMapping(value = "/customers", method = RequestMethod.GET)
@@ -60,53 +57,30 @@ public class CustomerController {
 
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/customers", method = RequestMethod.POST)
-    public ResultView saveCustomer(@RequestBody @Valid CustomerInfo customerInfo){
+    public ResultView saveCustomer(@RequestBody @Valid CustomerInfo customerInfo) throws Exception{
 
-        ResultView resultView = new ResultView();
-        resultView.setCode(2);
-        resultView.setMsg("the information of the customer is illegal");
+        ResultView resultView = customerResultViewService.saveCustomerView(customerInfo).get();
 
-        if(customerInfo != null && customerInfo.getCustomerID() == null){
-            if((customerService.saveCustomer(customerInfo)) == 1){
-                resultView.setCode(0);
-                resultView.setMsg("customer information has already saved ");
-            }
-        }
         return resultView;
     }
 
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/customer/{id}", method = RequestMethod.PUT)
     public ResultView changeCustomer(@RequestBody @Valid CustomerInfo customerInfo,
-                                     @PathVariable("id") @Validated @NotBlank Long customerId){
+                                     @PathVariable("id") @Validated @NotBlank Long customerId) throws Exception{
 
-        ResultView resultView = new ResultView();
-        resultView.setCode(2);
-        resultView.setMsg("the information of the customer is illegal");
+        ResultView resultView = customerResultViewService.changeCustomerView(customerInfo,customerId).get();
 
-        if(customerInfo != null && customerInfo.getCustomerID() != null
-                && customerService.getCustomerByID(customerId) != null){
-            if(customerService.changeCustomer(customerInfo) == 1){
-                resultView.setCode(0);
-                resultView.setMsg("customer information has already changed");
-            }
-        }
         return resultView;
     }
 
     @CrossOrigin(origins = "*", maxAge = 3600)
     @Validated
     @RequestMapping(value = "/customer/{id}", method = RequestMethod.DELETE)
-    public ResultView removeCustomerById(@PathVariable("id") @NotBlank Long customerId){
+    public ResultView removeCustomerById(@PathVariable("id") @NotBlank Long customerId) throws Exception{
 
-        ResultView resultView = new ResultView();
-        resultView.setCode(2);
-        resultView.setMsg("the information of the customer is illegal");
+        ResultView resultView = customerResultViewService.removeCustomerView(customerId).get();
 
-        if(customerService.removeCustomerByID(customerId) == 1){
-            resultView.setCode(0);
-            resultView.setMsg("customer information has been already removed");
-        }
         return resultView;
     }
 }

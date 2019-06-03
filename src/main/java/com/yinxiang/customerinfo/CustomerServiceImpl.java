@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import com.google.common.collect.Lists;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ import java.util.List;
 public class CustomerServiceImpl implements CustomerService{
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private CustomerInfoRepository customerInfoRepository;
 
     /**
      * @Description: to get the list of all the customers
@@ -28,7 +28,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public List<CustomerInfo> findAllCustomers() {
 
-        Iterable<CustomerInfo> customerInfoIterable = customerRepository.findAll();
+        Iterable<CustomerInfo> customerInfoIterable = customerInfoRepository.findAll();
 
         return Lists.newArrayList(customerInfoIterable);
     }
@@ -43,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService{
      */
     @Override
     public List<CustomerInfo> getCustomerByName(String name) {
-        return customerRepository.findByCustomerName(name);
+        return customerInfoRepository.findByCustomerName(name);
     }
 
     /**
@@ -56,7 +56,7 @@ public class CustomerServiceImpl implements CustomerService{
      */
     @Override
     public CustomerInfo getCustomerByID(Long id) {
-        List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerID(id);
+        List<CustomerInfo> customerInfoList = customerInfoRepository.findCustomerInfoByCustomerID(id);
         if(customerInfoList.size() > 0){
             return customerInfoList.get(0);
         }
@@ -72,12 +72,12 @@ public class CustomerServiceImpl implements CustomerService{
      * @Date: 2019/3/27 8:53 PM
      */
     @Override
-    public CustomerInfo getCustomerByPhone(String phone) {
-        List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerPhone(phone);
-        if(customerInfoList.size() > 0){
-            return customerInfoList.get(0);
-        }
-        return null;
+    public List<CustomerInfo> getCustomerByPhone(String phone) {
+        List<CustomerInfo> customerInfoList = customerInfoRepository.findCustomerInfoByCustomerPhone(phone);
+//        if(customerInfoList.size() > 0){
+//            return customerInfoList;
+//        }
+        return customerInfoList;
     }
 
     /**
@@ -89,12 +89,12 @@ public class CustomerServiceImpl implements CustomerService{
      * @Date: 2019/3/27 8:53 PM
      */
     @Override
-    public CustomerInfo getCustomerByEmail(String email) {
-        List<CustomerInfo> customerInfoList = customerRepository.findCustomerInfoByCustomerEmail(email);
-        if(customerInfoList.size() > 0){
-            return customerInfoList.get(0);
-        }
-        return null;
+    public List<CustomerInfo> getCustomerByEmail(String email) {
+        List<CustomerInfo> customerInfoList = customerInfoRepository.findCustomerInfoByCustomerEmail(email);
+//        if(customerInfoList.size() > 0){
+//            return customerInfoList;
+//        }
+        return customerInfoList;
     }
 
     /**
@@ -105,7 +105,7 @@ public class CustomerServiceImpl implements CustomerService{
      */
     @Override
     public Long countAllCustomer() {
-        return customerRepository.count();
+        return customerInfoRepository.count();
     }
 
     /**
@@ -118,9 +118,9 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public int removeCustomerByID(Long id) {
         int deleted = 0;
-        if(customerRepository.existsById(id)){
-            customerRepository.deleteById(id);
-            if(!customerRepository.existsById(id)) {
+        if(customerInfoRepository.existsById(id)){
+            customerInfoRepository.deleteById(id);
+            if(!customerInfoRepository.existsById(id)) {
                 deleted = 1;
             }
         }
@@ -139,7 +139,7 @@ public class CustomerServiceImpl implements CustomerService{
         int saved = 0;
         if (getCustomerByPhone(customerInfo.getCustomerPhone()) == null
                 && getCustomerByEmail(customerInfo.getCustomerEmail()) == null) {
-            if (customerRepository.existsById(customerRepository.save(customerInfo).getCustomerID())) {
+            if (customerInfoRepository.existsById(customerInfoRepository.save(customerInfo).getCustomerID())) {
                 saved = 1;
             }
         }
@@ -157,10 +157,10 @@ public class CustomerServiceImpl implements CustomerService{
     @Override
     public int changeCustomer(CustomerInfo customerInfo) {
         int changed = 0;
-        if(customerRepository.existsById(customerInfo.getCustomerID())
-                && getCustomerByPhone(customerInfo.getCustomerPhone()) == null
-                && getCustomerByEmail(customerInfo.getCustomerEmail()) == null){
-            customerRepository.save(customerInfo);
+        if(customerInfoRepository.existsById(customerInfo.getCustomerID())
+                && getCustomerByPhone(customerInfo.getCustomerPhone()).size() <= 1
+                && getCustomerByEmail(customerInfo.getCustomerEmail()).size() <= 1){
+            customerInfoRepository.save(customerInfo);
             changed = 1;
         }
         return changed;
@@ -183,7 +183,7 @@ public class CustomerServiceImpl implements CustomerService{
                 iterator.remove();
             }
         }
-        return Lists.newArrayList(customerRepository.saveAll(customerInfoIterable));
+        return Lists.newArrayList(customerInfoRepository.saveAll(customerInfoIterable));
     }
 
 }

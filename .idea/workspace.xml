@@ -2,13 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0306dd8-56db-40de-abd8-f0a92a3aecb8" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewService.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerInfo.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerInfo.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerInfoRepository.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerService.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerService.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerServiceImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerControllerTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerResultViewServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerResultViewServiceImplTest.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerServiceImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/Application.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerResultViewServiceImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerResultViewServiceImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java" afterPath="$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -49,10 +55,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="CustomerController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
-              <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
+            <state relative-caret-position="17">
+              <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -60,14 +66,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomerControllerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java">
+      <file leaf-file-name="CustomerResultViewServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1197">
-              <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
+            <state relative-caret-position="-1447">
+              <caret line="115" column="91" lean-forward="false" selection-start-line="115" selection-start-column="91" selection-end-line="115" selection-end-column="91" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="161" column="79" lean-forward="false" selection-start-line="161" selection-start-column="79" selection-end-line="161" selection-end-column="79" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomerServiceImplTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerServiceImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="72" column="83" lean-forward="false" selection-start-line="72" selection-start-column="83" selection-end-line="72" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,51 +105,6 @@
           <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
             <state>
               <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="62" lean-forward="false" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerResultViewServiceImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1921">
-              <caret line="113" column="113" lean-forward="false" selection-start-line="113" selection-start-column="113" selection-end-line="113" selection-end-column="113" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomerResultViewService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="48" column="106" lean-forward="false" selection-start-line="48" selection-start-column="106" selection-end-line="48" selection-end-column="106" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="32" column="59" lean-forward="false" selection-start-line="32" selection-start-column="59" selection-end-line="32" selection-end-column="59" />
-              <folding>
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -180,21 +163,29 @@
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerRepository.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/exceptionhandler/GlobleExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerService.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerInfo.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ValidationMessages.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/exceptionhandler/GlobalExceptionHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/result/ResultView.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerResultViewServiceImplTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerControllerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerService.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -212,10 +203,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-1655" />
-    <option name="y" value="42" />
-    <option name="width" value="1577" />
-    <option name="height" value="926" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="716" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -258,10 +248,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -302,7 +288,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yinxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="customerinfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ordering" type="b2602c69:ProjectViewProjectNode" />
@@ -383,7 +369,7 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="yinxiang" type="462c0819:PsiDirectoryNode" />
-              <item name="customer" type="462c0819:PsiDirectoryNode" />
+              <item name="customerinfo" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ordering" type="b2602c69:ProjectViewProjectNode" />
@@ -398,6 +384,10 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,15 +434,15 @@
     <configuration name="CustomerControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yinxiang.customer.*" />
+          <option name="PATTERN" value="com.yinxiang.customerinfo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ordering" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yinxiang.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customer.CustomerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.yinxiang.customerinfo" />
+      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customerinfo.CustomerControllerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -469,15 +459,15 @@
     <configuration name="CustomerControllerTest.changeCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yinxiang.customer.*" />
+          <option name="PATTERN" value="com.yinxiang.customerinfo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ordering" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yinxiang.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customer.CustomerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.yinxiang.customerinfo" />
+      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customerinfo.CustomerControllerTest" />
       <option name="METHOD_NAME" value="changeCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -494,15 +484,15 @@
     <configuration name="CustomerControllerTest.getCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yinxiang.customer.*" />
+          <option name="PATTERN" value="com.yinxiang.customerinfo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ordering" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yinxiang.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customer.CustomerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.yinxiang.customerinfo" />
+      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customerinfo.CustomerControllerTest" />
       <option name="METHOD_NAME" value="getCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -519,15 +509,15 @@
     <configuration name="CustomerControllerTest.removeCustomerById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yinxiang.customer.*" />
+          <option name="PATTERN" value="com.yinxiang.customerinfo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ordering" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yinxiang.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customer.CustomerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.yinxiang.customerinfo" />
+      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customerinfo.CustomerControllerTest" />
       <option name="METHOD_NAME" value="removeCustomerById" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -544,15 +534,15 @@
     <configuration name="CustomerControllerTest.saveCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.yinxiang.customer.*" />
+          <option name="PATTERN" value="com.yinxiang.customerinfo.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="ordering" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.yinxiang.customer" />
-      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customer.CustomerControllerTest" />
+      <option name="PACKAGE_NAME" value="com.yinxiang.customerinfo" />
+      <option name="MAIN_CLASS_NAME" value="com.yinxiang.customerinfo.CustomerControllerTest" />
       <option name="METHOD_NAME" value="saveCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -658,9 +648,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.removeCustomerById" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.changeCustomer" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.saveCustomer" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.saveCustomer" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.removeCustomerById" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.changeCustomer" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.CustomerControllerTest.getCustomer" />
       </list>
     </recent_temporary>
@@ -708,19 +698,15 @@
       <workItem from="1559117523199" duration="9976000" />
       <workItem from="1559188328083" duration="12496000" />
       <workItem from="1559263979634" duration="1878000" />
-      <workItem from="1559313918376" duration="3813000" />
+      <workItem from="1559313918376" duration="10987000" />
+      <workItem from="1559559141869" duration="4097000" />
+      <workItem from="1559576048320" duration="2374000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomerControllerTest - 2019.05.31 at 22h 51m 34s.xml">
+    <history-entry file="CustomerControllerTest - 2019.06.03 at 19h 57m 28s.xml">
       <configuration name="CustomerControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerControllerTest - 2019.06.01 at 14h 58m 47s.xml">
-      <configuration name="CustomerControllerTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomerControllerTest_removeCustomerById - 2019.05.31 at 09h 25m 41s.xml">
-      <configuration name="CustomerControllerTest.removeCustomerById" configurationId="JUnit" />
     </history-entry>
     <history-entry file="CustomerControllerTest_removeCustomerById - 2019.05.31 at 09h 26m 19s.xml">
       <configuration name="CustomerControllerTest.removeCustomerById" configurationId="JUnit" />
@@ -734,6 +720,12 @@
     <history-entry file="CustomerControllerTest_saveCustomer - 2019.05.31 at 09h 11m 30s.xml">
       <configuration name="CustomerControllerTest.saveCustomer" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CustomerControllerTest_saveCustomer - 2019.06.03 at 19h 52m 44s.xml">
+      <configuration name="CustomerControllerTest.saveCustomer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="CustomerControllerTest_saveCustomer - 2019.06.03 at 19h 57m 00s.xml">
+      <configuration name="CustomerControllerTest.saveCustomer" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="CustomerServiceImplTest_saveAllCustomers - 2019.05.23 at 21h 36m 36s.xml">
       <configuration name="CustomerServiceImplTest.saveAllCustomers" configurationId="JUnit" />
     </history-entry>
@@ -745,7 +737,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="152526000" />
+    <option name="totallyTimeSpent" value="166171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,32 +749,32 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1920" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.6392276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33028457" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3380682" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5779703" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57670456" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1656017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13247173" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21299255" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3231018" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39735773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39735773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -828,14 +820,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java</url>
+          <line>28</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java</url>
-          <line>43</line>
+          <url>file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java</url>
+          <line>40</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -1042,7 +1034,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerInfoRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
@@ -1059,28 +1051,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/bind/annotation/RestController.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1105,28 +1079,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="84" column="18" lean-forward="false" selection-start-line="84" selection-start-column="18" selection-end-line="84" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ValidationMessages.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="59" lean-forward="false" selection-start-line="3" selection-start-column="59" selection-end-line="3" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="29" column="26" lean-forward="false" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,10 +1120,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/exceptionhandler/GlobalExceptionHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerResultViewServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="748">
+          <caret line="53" column="93" lean-forward="false" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
           <folding />
         </state>
       </provider>
@@ -1183,11 +1139,77 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/exceptionhandler/GlobalExceptionHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="62" lean-forward="false" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
+        <state relative-caret-position="19">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="59" column="28" lean-forward="false" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/enums/ResultEnums.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="461">
+          <caret line="72" column="56" lean-forward="false" selection-start-line="72" selection-start-column="56" selection-end-line="72" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="23" column="64" lean-forward="false" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="35" column="16" lean-forward="false" selection-start-line="35" selection-start-column="16" selection-end-line="35" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1122">
+          <caret line="66" column="94" lean-forward="false" selection-start-line="66" selection-start-column="94" selection-end-line="66" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerResultViewServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1447">
+          <caret line="115" column="91" lean-forward="false" selection-start-line="115" selection-start-column="91" selection-end-line="115" selection-end-column="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customerinfo/CustomerServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="161" column="79" lean-forward="false" selection-start-line="161" selection-start-column="79" selection-end-line="161" selection-end-column="79" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1198,49 +1220,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="48" column="106" lean-forward="false" selection-start-line="48" selection-start-column="106" selection-end-line="48" selection-end-column="106" />
+        <state relative-caret-position="1972">
+          <caret line="136" column="128" lean-forward="false" selection-start-line="136" selection-start-column="128" selection-end-line="136" selection-end-column="128" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerController.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customerinfo/CustomerServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
-          <caret line="52" column="100" lean-forward="false" selection-start-line="52" selection-start-column="100" selection-end-line="52" selection-end-column="100" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerResultViewServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="53" column="93" lean-forward="false" selection-start-line="53" selection-start-column="93" selection-end-line="53" selection-end-column="93" />
+        <state relative-caret-position="416">
+          <caret line="72" column="83" lean-forward="false" selection-start-line="72" selection-start-column="83" selection-end-line="72" selection-end-column="83" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/yinxiang/customer/CustomerResultViewServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1921">
-          <caret line="113" column="113" lean-forward="false" selection-start-line="113" selection-start-column="113" selection-end-line="113" selection-end-column="113" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/yinxiang/customer/CustomerControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1197">
-          <caret line="77" column="127" lean-forward="false" selection-start-line="77" selection-start-column="127" selection-end-line="77" selection-end-column="127" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

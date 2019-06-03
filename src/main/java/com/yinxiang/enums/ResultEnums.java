@@ -64,7 +64,13 @@ public enum ResultEnums {
 
     NONE(32, "none"),
 
-    SYSTEM_EXCEPTION(33, "系统繁忙，请稍后再试")
+    SYSTEM_EXCEPTION(33, "系统繁忙，请稍后再试"),
+
+    CUSTOMER_CAN_NOT_SAVE(34, "customer can not save"),
+
+    CUSTOMER_CAN_NOT_CHANGE(35, "customer can not change"),
+
+    CUSTOMER_CAN_NOT_REMOVE(36, "customer can not remove")
     ;
 
     private Integer code;

@@ -1,4 +1,4 @@
-package com.yinxiang.customer;
+package com.yinxiang.customerinfo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
@@ -54,4 +54,8 @@ public class CustomerInfo {
     /** customer address */
     @Column(name="customer_address")
     private String customerAddress;
+
+    /** customer ali id & wechat id */
+
+    /** customer skin detail */
 }
